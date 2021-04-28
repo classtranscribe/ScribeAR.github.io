@@ -16,7 +16,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 
-
+/**
+ * Usage of useStyles no need for css module right now
+ */
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -35,7 +37,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+/**
+ * 
+ * Display component for AR mode option menu
+ * The option menu consist of components:
+ * Text : block to adjust text size display
+ * Mode : block to adjust the area of displayed word
+ * @todo 
+ * Instruction : block to pop up an instruction window.
+ */
 const AROption = (props) => {
   const dispatch = useDispatch()
   const { text, setText } = props;
@@ -73,9 +83,13 @@ const AROption = (props) => {
         </img>
       )
     }
-
   }
-  const Text = (p) => (
+
+  /**
+   * Text component
+   * @returns 
+   */
+  const Text = () => (
     <div className={classes.icon}>
       <ToggleButton type='Icon' onClick={minus}>
         <RemoveIcon />
@@ -87,6 +101,10 @@ const AROption = (props) => {
     </div>
   )
 
+  /**
+   * Mode component
+   * @returns 
+   */
   const Mode = () => (
     <div className={classes.icon}>
       <ToggleButton type='Icon' onClick={() => dispatch(decrease_box())}>
@@ -98,6 +116,18 @@ const AROption = (props) => {
       </ToggleButton>
     </div>
   )
+
+  /**
+   * @todo instruction
+   * @returns 
+   */
+  const Instruction = () => (
+    <div>
+      instruction
+    </div>
+  )
+
+
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
@@ -116,6 +146,9 @@ const AROption = (props) => {
           <div className={classes.paper}>
             Area Size
           </div>
+        </Grid>
+        <Grid item xs={12}>
+          <Instruction />
         </Grid>
       </Grid>
     </div>

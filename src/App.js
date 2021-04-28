@@ -12,7 +12,6 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('text', JSON.stringify(text));
   }, [text])
-  console.log(window.location.pathname)
   return (
     <Router>
       <Switch>

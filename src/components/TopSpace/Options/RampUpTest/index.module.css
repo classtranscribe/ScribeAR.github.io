@@ -1,0 +1,11 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    display: flex;
+    margin-left: 10px;}
+.spring {
+    display: flex;
+    margin-right: 10px;
+}

@@ -6,7 +6,6 @@ import Drawer from '../Drawer'
 // addEventListener, removeEventListener
 // React functions used: constructor, setState, componentDidMount, render
 export default function TopSpace(props) {
-
   var h = props.height; // I don't remember why I set the height like this.
   // The Options component takes a function as a prop.
   //const meh = (state) => state.meh
